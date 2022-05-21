@@ -7,9 +7,3 @@
 
 const yourAge = prompt("Vui lòng nhập vào số tuổi của bạn: ", "");
 console.log(yourAge);
-
-if (yourAge >= 18) {
-    alert("Bạn đủ tuổi");
-} else {
-    alert("Bạn không đủ tuổi");
-}
