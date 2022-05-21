@@ -12,11 +12,5 @@ console.log(Number(false));
 // VD:
 console.log(String(4.5)); // output: 4.5 nhưng mà duoiws dạng string
 console.log(String(null)); // output: null nhưng mà duoiws dạng string
-console.log(String(false)); // output: false nhưng mà duoiws dạng string
-console.log(String(true)); // output: same
-// Boolean(value) -> trả về true hoặc false
-// Cái này đã tìm hiểu qua nhiều trong các ngôn ngữ lập trình khác nên sẽ tạm thời bỏ qua
-// Type Coercion
-// dấu + trong js rất sida
-console.log(1 + 2);
-console.log(10 + "10");
+console.log(String(false));
+console.log(String(true));

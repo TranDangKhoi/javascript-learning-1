@@ -19,4 +19,4 @@ console.log(String(true)); // output: same
 // Type Coercion
 // dấu + trong js rất sida
 console.log(1 + 2);
-console.log(10 + "10");
+console.log(10 + 10);
