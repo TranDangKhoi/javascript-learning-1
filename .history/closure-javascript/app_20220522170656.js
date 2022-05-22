@@ -1,0 +1,19 @@
+// Closure
+
+// function greetings() { // parent function -> outer function
+//     let msg = "Hi!";
+
+//     function sayHi() { // child function -> inner function
+//         console.log(msg);
+//     }
+//     return sayHi;
+// }
+
+// const hello = greetings();
+// hello();
+
+function greetings(msg) {
+    return function hiYourName(yourName) {
+        console.log(`${msg} ${yourName}`);
+    }
+}
