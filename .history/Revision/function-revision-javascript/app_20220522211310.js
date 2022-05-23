@@ -49,9 +49,3 @@ function callbackAverage(a, b, callback) {
     const averageCal = average(a, b);
     callback(averageCal);
 }
-
-function printAvg(result) {
-    console.log(`Avg is ${result}`);
-}
-
-console.log(callbackAverage(3, 3, printAvg));

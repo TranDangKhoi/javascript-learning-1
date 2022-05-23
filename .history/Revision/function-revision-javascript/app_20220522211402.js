@@ -54,4 +54,5 @@ function printAvg(result) {
     console.log(`Avg is ${result}`);
 }
 
-console.log(callbackAverage(3, 3, printAvg));
+console.log(callbackAverage(3, 3, printAvg))
+''

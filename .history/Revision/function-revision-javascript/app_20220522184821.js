@@ -5,7 +5,7 @@ function compareNumber(a = 0, b = 0) {
     return result;
 }
 
-// console.log(compareNumber(3, 2));
+console.log(compareNumber(3, 2));
 
 // Bài chữa:
 
@@ -16,7 +16,7 @@ function compareNumber2(a = 0, b = 0) {
     return `The bigger number between ${a} and ${b} is ${Math.max(a, b)}`;
 }
 
-// console.log(compareNumber2("1000", 100));
+console.log(compareNumber2("1000", 100));
 
 // Bài 2: In hoa chữ cái đầu tiên trong 1 chữ
 function capitalize(word = "") {
@@ -28,11 +28,12 @@ function capitalize(word = "") {
     return newWord;
 }
 
-// console.log(capitalize("kHOI"));
+console.log(capitalize("kHOI"));
 
 function logCompareResult(a, b, callback) {
     const compareFn = compareNumber2(a, b);
     callback(compareFn);
+    return compareFn;
 }
 
 function printMax(number) {
@@ -46,12 +47,11 @@ function average(a, b) {
 }
 
 function callbackAverage(a, b, callback) {
-    const averageCal = average(a, b);
-    callback(averageCal);
+    const averageResult = average(a, b);
+    callback(averageResult);
+    return averageResult;
 }
 
-function printAvg(result) {
-    console.log(`Avg is ${result}`);
+function printAverage(number) {
+    console.log(number);
 }
-
-console.log(callbackAverage(3, 3, printAvg));

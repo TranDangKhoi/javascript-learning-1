@@ -33,6 +33,7 @@ function capitalize(word = "") {
 function logCompareResult(a, b, callback) {
     const compareFn = compareNumber2(a, b);
     callback(compareFn);
+    return compareFn;
 }
 
 function printMax(number) {
@@ -46,12 +47,11 @@ function average(a, b) {
 }
 
 function callbackAverage(a, b, callback) {
-    const averageCal = average(a, b);
-    callback(averageCal);
+    const averageResult = average(a, b);
+    callback(averageResult);
+    return averageResult;
 }
 
-function printAvg(result) {
-    console.log(`Avg is ${result}`);
+function printAverage(number) {
+    // console.log(number);
 }
-
-console.log(callbackAverage(3, 3, printAvg));
