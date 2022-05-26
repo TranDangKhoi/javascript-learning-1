@@ -13,7 +13,7 @@ console.log(new Date(0));
 // 4 cách sử dụng new Date()
 // new Date() -> In ra ngày giờ hiện tại
 // new Date(timestamp) -> dựa vào timestamp để in ra ngày giờ
-// new Date(date string) ->
+// new Date(date string) -> 
 // new Date(year,month,day,hours,minutes,seconds,miliseconds)
 console.log(new Date(1653234062793));
 
