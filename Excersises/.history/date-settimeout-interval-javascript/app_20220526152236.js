@@ -66,7 +66,7 @@ function timeSince(date) {
     timer = seconds / 2678400;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} tháng trước`);
-        return;
+
     }
 
     timer = seconds / 604800;

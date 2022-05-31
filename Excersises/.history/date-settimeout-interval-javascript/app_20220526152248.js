@@ -60,43 +60,43 @@ function timeSince(date) {
     let timer = seconds / 31536000;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} năm trước`);
-        return;
+
     }
 
     timer = seconds / 2678400;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} tháng trước`);
-        return;
+
     }
 
     timer = seconds / 604800;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} tuần trước`);
-        return;
+
     }
 
     timer = seconds / 86400;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} ngày trước`);
-        return;
+
     }
 
     timer = seconds / 3600;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} giờ trước`);
-        return;
+
     }
 
 
     timer = seconds / 60;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} phút trước`);
-        return;
+
     }
     timer = seconds;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} giây trước`);
-        return;
+
     }
 
     console.log(seconds);

@@ -108,4 +108,4 @@ function timeSince(date) {
 // 1 ngày = 1 ngày * 24h * 60p * 60s -> 1 * 24 * 60 * 60 = 86400;
 // 1 giờ = 1 * 60 * 60 = 3600;
 // 1 phút = 1 * 60 = 60;
-timeSince("Wed April 26 2022 15:15:11 GMT+0700 (Indochina Time)");
+timeSince("Wed Mar 26 2022 15:15:11 GMT+0700 (Indochina Time)");
