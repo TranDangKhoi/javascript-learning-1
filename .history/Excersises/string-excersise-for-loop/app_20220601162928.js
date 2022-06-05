@@ -1,0 +1,1 @@
+const myLove = ["I", "Love", "You"];
