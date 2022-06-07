@@ -1,1 +1,0 @@
-// 1. Viết function so sánh hai số a và b tìm ra số lớn hơn

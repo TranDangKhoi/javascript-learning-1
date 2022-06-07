@@ -1,1 +1,0 @@
-const yourAge = "500";
