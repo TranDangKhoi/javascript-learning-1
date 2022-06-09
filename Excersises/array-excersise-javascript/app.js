@@ -62,3 +62,44 @@ const fizzBuzz = (num) => {
 };
 
 console.log(fizzBuzz(6));
+
+// 5. Đếm ký tự vowels có trong chuỗi
+// VD: evondev -> 3 kí tự vowels
+
+let count = 0;
+const vowels = ["a", "e", "i", "o", "u"];
+
+const vowelsCharCount = (str) => {
+  const arrayStr = str.toLowerCase().split("");
+  console.log(arrayStr);
+  for (let i = 0; i < arrayStr.length; i++) {
+    if (vowels.includes(arrayStr[i])) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(vowelsCharCount("EVONDEV"));
+
+// 6. Cho 1 mảng giá trị các số [1,2,3,1,1,1,1,2,2,2,5,5,5,7,7,6].
+// Viết một function trả về các giá trị unique. Kết quả ở trên sẽ là [1,2,3,5,7,6]
+
+const uniqueChars = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+};
+
+console.log(uniqueChars([1, 6, 6, 6, 1, 1, 2, 3, 3, 3, 4, 5]));
+
+// 7. Viết 1 function xử lý từ 1 mảng lớn thành nhiều mảng con dựa vào số nguyên
+// đầu vào -> VD: ([1,2,3,4,5], 2) -> ([1,2], [3,4] , [5])
+
+const unFlatArrays = (arr) => {
+
+};
