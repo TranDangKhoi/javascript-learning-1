@@ -100,6 +100,14 @@ console.log(uniqueChars([1, 6, 6, 6, 1, 1, 2, 3, 3, 3, 4, 5]));
 // 7. Viết 1 function xử lý từ 1 mảng lớn thành nhiều mảng con dựa vào số nguyên
 // đầu vào -> VD: ([1,2,3,4,5], 2) -> ([1,2], [3,4] , [5])
 
-const unFlatArrays = (arr) => {
-
+const splitArray = (arr, num) => {
+  let result = [];
+  let index = 0;
+  while (index < arr.length) {
+    result.push(arr.slice(index, num + index));
+    index = index + num;
+  }
+  return result;
 };
+
+console.log(splitArray([1, 2, 3, 4, 5, 6], 3));
