@@ -43,3 +43,35 @@ for (let key in student) {
   }
   console.log(`${key} : ${student[key]}`);
 }
+
+// Ôn tập về object
+
+const employee = {
+  name: "Khoi",
+  age: 19,
+  skin: "Black",
+  isMale: true,
+  level: "Intern",
+  talk: function () {
+    console.log("Hello guys");
+  },
+};
+
+console.log(employee.name);
+console.log(employee["name"]);
+// Add a new key / property to the object
+// Simply just write objectName[newKey] or objectName.newKey = something
+employee["is-male"] = true;
+console.log(employee);
+// Delete keys in object
+delete employee["is-male"];
+// Change key's value in object
+employee.isMale = false;
+console.log(employee.isMale);
+
+// For-in loop to print all keys and key's value
+// NOTE: For-in loop không được sử dụng cho Array vì tính chất của các index trong array rất quan trọng
+
+for (let prop in employee) {
+  console.log(`${prop} : ${employee[prop]}`);
+}

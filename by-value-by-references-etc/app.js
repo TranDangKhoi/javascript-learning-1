@@ -1,4 +1,4 @@
-// By value -> giá trị thực sự đương lưu trong vùng bộ nhớ
+// By value -> giá trị thực sự đc lưu trong vùng bộ nhớ
 const num1 = 1;
 const num2 = 1;
 console.log(num1 === num2); // true
@@ -51,7 +51,7 @@ const [x, ...rest] = toys;
 console.log(rest);
 
 function demo(a, ...rest) {
-    console.log(a, rest);
+  console.log(a, rest);
 }
 
 demo(1, 2, 3, 4, 5);
