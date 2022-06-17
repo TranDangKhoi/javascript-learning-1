@@ -7,6 +7,7 @@
 
 ## Spread Operator
 
+- Spread Operator (...) có thể coi như là một thuật toán giúp lấy ra toàn bộ phần tử trong mảng array
 - Spread Operator có rất nhiều tính năng giúp ích trong Javascript, có thể kể đến tiêu biểu nhất là:
 + Sao chép một mảng
 + Tách hoặc kết hợp một hay nhiều mảng
