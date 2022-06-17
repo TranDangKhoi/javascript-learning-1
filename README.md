@@ -1,3 +1,5 @@
+##**Những thứ cần lưu ý trong quá trình học JS**
+
 ## Array.find, Array.findIndex
 - Tìm 1 phần tử trong mảng mà khong tìm thấy thì sẽ trả về undefined
 
