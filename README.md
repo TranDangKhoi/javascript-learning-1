@@ -1,8 +1,5 @@
-header {
-  font-size: 30px;
-}
 
-<header>**Những thứ cần lưu ý trong quá trình học JS**</header>
+<h1>**Những thứ cần lưu ý trong quá trình học JS**</h1>
 
 ## Array.find, Array.findIndex
 - Tìm 1 phần tử trong mảng mà khong tìm thấy thì sẽ trả về undefined
