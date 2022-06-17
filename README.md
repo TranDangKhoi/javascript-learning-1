@@ -14,15 +14,15 @@
 + undefined
 -> 5 Kiểu dữ liệu này được lưu trữ dưới dạng value : còn gọi là Giá trị.
 VD:
-var a = "Johny"
-var b = a -> b đang là Johny
-b = "Depp"
-console.log('a',a)
-console.log('b',b)
+var a = "Johny"<br/>
+var b = a -> b đang là Johny<br/>
+b = "Depp"<br/>
+console.log('a',a)<br/>
+console.log('b',b)<br/>
 // Output :
-Variables	Values
-    a	    'Johny'
-    b	    'Depp'
+Variables	Values<br/>
+    a	    'Johny'<br/>
+    b	    'Depp'<br/>
 
 * VẬY -> Khi ta sao chép giá trị của biến này cho biến khác thì giá trị của 2 biến này hoàn toàn độc lập và không hề liên hệ gì đến với nhau.
 
@@ -34,17 +34,17 @@ Trong javascript có 3 kiểu dữ liệu tham chiếu **"Reference"**:
 
 const arr1=['kendy','john'];
 
-const arr2= arr1;
-arr2[0]='tom';
+const arr2= arr1;<br/>
+arr2[0]='tom';<br/>
 
-console.log('arr1',arr1);
+console.log('arr1',arr1);<br/>
 
-console.log('arr2',arr2);
+console.log('arr2',arr2);<br/>
 
 //Output:
-Variables	Values
-   arr1	    <#001>
-   arr2	    <#001>
+Variables	Values<br/>
+   arr1	    <#001><br/>
+   arr2	    <#001><br/>
 
 ## Spread Operator
 
@@ -67,9 +67,9 @@ Variables	Values
 -> Object bao gồm key và value, trong đó key là thuộc tính của vật thể đó, còn value là giá trị của thuộc tính
 VD: Có một bạn tên là Khôi và hiện tại bạn ấy 19 tuổi thì ta có thể viết trong JS là:
 
-const person = {
-    personName : "Khoi",
-    currentAge : 19
+const person = { <br/>
+    personName : "Khoi",<br/>
+    currentAge : 19<br/>
 }
 
 Ngoài ra ta cũng có thể dùng dấu - để biểu diễn key như sau: (Thường cách này ít khi được sử dụng)
@@ -85,10 +85,10 @@ const person = {
 -> Giải thích dễ hiểu về nested thì nó sẽ gộp các giá trị trong object thành mảng array như sau:
 VD ta có object:
 
-const user = {
-    name: "Khoi",
-    yearsOfExp: 3,
-}
+const user = { <br/>
+    name: "Khoi", <br/>
+    yearsOfExp: 3, <br/>
+}<br/>
 
 -> nếu ta dùng Object.entries(user) nó sẽ trả về -> [["name","Khoi"],["yearsOfExp",3]]
 
