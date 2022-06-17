@@ -5,6 +5,47 @@
 
 - Lọc mảng, mà mảng không có phần tử nào thỏa mãn điều kiện thì sẽ trả về mảng rỗng
 
+## Khái quát về By Values và By References
+- Trong javascript có 5 kiểu dữ liệu nguyên thủy **"primitive types"**, đó chính là:
++ Number
++ String
++ boolean
++ Null
++ undefined
+-> 5 Kiểu dữ liệu này được lưu trữ dưới dạng value : còn gọi là Giá trị.
+VD:
+var a = "Johny"
+var b = a -> b đang là Johny
+b = "Depp"
+console.log('a',a)
+console.log('b',b)
+// Output :
+Variables	Values
+    a	    'Johny'
+    b	    'Depp'
+
+* VẬY -> Khi ta sao chép giá trị của biến này cho biến khác thì giá trị của 2 biến này hoàn toàn độc lập và không hề liên hệ gì đến với nhau.
+
+Trong javascript có 3 kiểu dữ liệu tham chiếu **"Reference"**:
++ Function
++ Array
++ Object
+- Gọi chung là kiểu dữ liệu **Object type**, vì nó không mang giá trị mà chỉ tham chiếu đến vùng lưu trữ của object đó trong bộ nhớ (tức là cả kể giá trị trong mảng, object có giống nhau ra sao, thì nó cũng sẽ không bao giờ = nhau, vì kiểu dữ liệu **Object type** chỉ so sánh vùng bộ nhớ lưu trữ), Reference sẽ không lưu giá trị được gán mà nó sẽ chỉ lưu địa chỉ đến đến giá trị của bộ nhớ. Ví dụ:
+
+const arr1=['kendy','john'];
+
+const arr2= arr1;
+arr2[0]='tom';
+
+console.log('arr1',arr1);
+
+console.log('arr2',arr2);
+
+//Output:
+Variables	Values
+   arr1	    <#001>
+   arr2	    <#001>
+
 ## Spread Operator
 
 - Spread Operator (...) có thể coi như là một thuật toán giúp lấy ra toàn bộ phần tử trong mảng array
