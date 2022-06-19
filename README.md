@@ -1,6 +1,53 @@
 
 <h1>Những thứ cần lưu ý trong quá trình học JS</h1>
 
+## Hoisting trong JS
+Hoisting là hành động mặc định của Javascript, nó sẽ chuyển phần khai báo lên phía trên top Trong Javascript, một biến (variable) có thể được khai báo sau khi được sử dụng
+VD:
+console.log(a);
+var a = "Hello Hoisiting";
+-> Thực chất sẽ biến thành:
+var a = "Hello Hoisting";
+console.log(a);
+
+-> Ouput vẫn sẽ hiển thị ra "Hello Hoisting" bởi vì **phần khai báo giá trị** (var a) đã được dịch chuyển lên trên cùng, vì javascript chỉ dịch chuyển phần khai báo nên nếu ta viết như sau thì kết quả sẽ ra là undefined
+
+console.log(a);
+var a;
+a = "Hello Hoisting;
+-> Thực chất sẽ biến thành;
+var a;
+console.log(a);
+a = "Hello Hoisting";
+
+-> Output sẽ hiển thị ra undefined bởi vì chỉ **phần khai báo giá trị** được dịch chuyển lên cùng, còn phần gán giá trị (a="Hello Hoisting") vẫn giữ vị trí nằm ở dưới 
+
+-> KẾT LUẬN: Chỉ nên sử dụng var nếu muốn lấy biến đó làm biến toàn cục
+
+**Không những vậy, nếu ta tạo một hàm = function thì function đó cũng sẽ bị dịch chuyển lên trên cùng**
+
+## Ngoài ra trong JS, nếu bạn khởi tạo một biến var trong một hàm function thì nó sẽ dịch chuyển biến đó lên trên cùng của function's block
+
+VD: 
+doSomething();
+function doSomething(){
+    console.log(a);
+    var a = "fly";
+}
+
+-> Thực chất sẽ biến thành:
+doSomething();
+function doSomething(){
+    var a;
+    console.log(a);
+    a = "fly";
+}
+
+Output sẽ hiển thị undefined -> vì phần khai báo chỉ được dịch chuyển lên trên cùng của hàm doSomething chứ không phải của chương trình
+
+**Vậy nên nếu muốn tránh tình trạng hoisting, ta nên sử dụng const hoặc let**
+
+
 ## Array.find, Array.findIndex
 - Tìm 1 phần tử trong mảng mà khong tìm thấy thì sẽ trả về undefined
 
