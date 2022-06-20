@@ -3,22 +3,22 @@
 
 ## Hoisting trong JS
 Hoisting là hành động mặc định của Javascript, nó sẽ chuyển phần khai báo lên phía trên top Trong Javascript, một biến (variable) có thể được khai báo sau khi được sử dụng
-VD:
-console.log(a);
-var a = "Hello Hoisiting";
--> Thực chất sẽ biến thành:
-var a = "Hello Hoisting";
-console.log(a);
+VD: </br>
+console.log(a); </br>
+var a = "Hello Hoisiting"; </br>
+-> Thực chất sẽ biến thành: </br>
+var a = "Hello Hoisting"; </br>
+console.log(a); </br>
 
 -> Ouput vẫn sẽ hiển thị ra "Hello Hoisting" bởi vì **phần khai báo giá trị** (var a) đã được dịch chuyển lên trên cùng, vì javascript chỉ dịch chuyển phần khai báo nên nếu ta viết như sau thì kết quả sẽ ra là undefined
 
-console.log(a);
-var a;
-a = "Hello Hoisting;
--> Thực chất sẽ biến thành;
-var a;
-console.log(a);
-a = "Hello Hoisting";
+console.log(a); </br>
+var a; </br> 
+a = "Hello Hoisting; </br>
+-> Thực chất sẽ biến thành; </br>
+var a; </br>
+console.log(a); </br>
+a = "Hello Hoisting"; </br>
 
 -> Output sẽ hiển thị ra undefined bởi vì chỉ **phần khai báo giá trị** được dịch chuyển lên cùng, còn phần gán giá trị (a="Hello Hoisting") vẫn giữ vị trí nằm ở dưới 
 
@@ -26,24 +26,24 @@ a = "Hello Hoisting";
 
 **Không những vậy, nếu ta tạo một hàm = function thì function đó cũng sẽ bị dịch chuyển lên trên cùng**
 
-## Ngoài ra trong JS, nếu bạn khởi tạo một biến var trong một hàm function thì nó sẽ dịch chuyển biến đó lên trên cùng của function's block
+## Ngoài ra trong JS, nếu bạn khởi tạo một biến var trong một hàm function thì nó sẽ dịch chuyển biến đó lên trên cùng của function's block 
 
-VD: 
-doSomething();
-function doSomething(){
-    console.log(a);
-    var a = "fly";
-}
+VD: </br>
+doSomething();</br>
+function doSomething(){</br>
+    console.log(a);</br>
+    var a = "fly";</br>
+}</br>
 
--> Thực chất sẽ biến thành:
-doSomething();
-function doSomething(){
-    var a;
-    console.log(a);
-    a = "fly";
-}
+-> Thực chất sẽ biến thành:</br>
+doSomething();</br>
+function doSomething(){</br>
+    var a;</br>
+    console.log(a);</br>
+    a = "fly";</br>
+}</br>
 
-Output sẽ hiển thị undefined -> vì phần khai báo chỉ được dịch chuyển lên trên cùng của hàm doSomething chứ không phải của chương trình
+Output sẽ hiển thị undefined -> vì phần khai báo chỉ được dịch chuyển lên trên cùng của hàm doSomething chứ không phải của chương trình</br>
 
 **Vậy nên nếu muốn tránh tình trạng hoisting, ta nên sử dụng const hoặc let**
 
@@ -146,5 +146,7 @@ const user = { <br/>
 + Object.assign(firstObject, secondObject) -> Sao chép dữ liệu từ object này sang object khác
 + Object.freeze(object) -> Đóng băng object, không cho chỉnh sửa key và value của object
 + Object.seal(object) -> Cho phép chỉnh sửa key và value nhưng không đc thêm key và value mới
+
+
 
 
