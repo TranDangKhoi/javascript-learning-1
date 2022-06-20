@@ -10,7 +10,7 @@ var a = "Hello Hoisiting"; </br>
 var a = "Hello Hoisting"; </br>
 console.log(a); </br>
 
--> Ouput vẫn sẽ hiển thị ra "Hello Hoisting" bởi vì **phần khai báo giá trị** (var a) đã được dịch chuyển lên trên cùng, vì javascript chỉ dịch chuyển phần khai báo nên nếu ta viết như sau thì kết quả sẽ ra là undefined
+-> Ouput vẫn sẽ hiển thị ra "Hello Hoisting" bởi vì **phần khai báo giá trị** (var a) đã được dịch chuyển lên trên cùng, vì Javascript chỉ dịch chuyển phần khai báo nên nếu ta viết như sau thì kết quả sẽ ra là undefined
 
 console.log(a); </br>
 var a; </br> 
@@ -56,7 +56,7 @@ Output sẽ hiển thị undefined -> vì phần khai báo chỉ được dịch
 - Lọc mảng, mà mảng không có phần tử nào thỏa mãn điều kiện thì sẽ trả về mảng rỗng
 
 ## Khái quát về By Values và By References
-- Trong javascript có 5 kiểu dữ liệu nguyên thủy **"primitive types"**, đó chính là:
+- Trong Javascript có 5 kiểu dữ liệu nguyên thủy **"primitive types"**, đó chính là:
 + Number
 + String
 + boolean
@@ -76,7 +76,7 @@ Variables	Values<br/>
 
 * VẬY -> Khi ta sao chép giá trị của biến này cho biến khác thì giá trị của 2 biến này hoàn toàn độc lập và không hề liên hệ gì đến với nhau.
 
-Trong javascript có 3 kiểu dữ liệu tham chiếu **"Reference"**:
+Trong Javascript có 3 kiểu dữ liệu tham chiếu **"Reference"**:
 + Function
 + Array
 + Object
@@ -111,7 +111,7 @@ Variables	Values<br/>
 ## Những thứ cần lưu ý về Object
 
 - Object là gì ?
--> Object trong JavaScript là một khái niệm dùng để biểu diễn một vật cụ thể. Trong đó, các thuộc tính dùng để miêu tả đặc điểm, tính chất của đối tượng.
+-> Object trong Javascript là một khái niệm dùng để biểu diễn một vật cụ thể. Trong đó, các thuộc tính dùng để miêu tả đặc điểm, tính chất của đối tượng.
 
 - Object bao gồm gì ?
 -> Object bao gồm key và value, trong đó key là thuộc tính của vật thể đó, còn value là giá trị của thuộc tính
@@ -147,6 +147,53 @@ const user = { <br/>
 + Object.freeze(object) -> Đóng băng object, không cho chỉnh sửa key và value của object
 + Object.seal(object) -> Cho phép chỉnh sửa key và value nhưng không đc thêm key và value mới
 
+## Tìm hiểu về Destructuring trong Javascript
+- Destructuring Assignment là một cú pháp cho phép tách dữ liệu được lưu trữ bên trong (nested) Objects hoặc Arrays (tổng quát hơn là các iterable values) và gán chúng cho các biến riêng biệt.
+
+- Destructuring có **2 nhóm chính**:
++ Object Destructuring
++ Array Destructuring
+
+- Trước khi tìm hiểu từng nhóm trên, ta sẽ ví dụ đơn giản một cái như sau:
+
+var a, b;</br>
+[a, b] = [1, 2]</br>
+console.log(a, b); //1 2</br>
+
+Hoặc: </br>
+
+const [a, b] = [1, 2]</br>
+console.log(a, b); //1 2</br>
+
+-> VD1: </br>
+Dòng 1: ta có 2 biến a và b trong array.</br>
+Dòng 2: chúng ta thiết lập chúng và set chúng bằng với một arrays tương ứng.</br>
+Dòng 3: ta in các giá trị của a & b và chúng tôi nhận được 1 và 1 tương ứng là các phần tử trong mảng phía bên phải. </br>
+-> Đó chính là Destructuring Javascript. Chưa hết đâu, đó chỉ là một ví dụ đơn giản để giúp bạn hiểu trước tạm thời thôi.
+-> Ta hãy cùng đến với ví dụ thứ hai:
+
+const [a, b, c] = [1, 2, 3, 4, 5] </br>
+console.log(a, b, c); // 1, 2, 3 </br>
+
+const [a, b, ...c] = [1, 2, 3, 4, 5] </br>
+console.log(a, b, c) ; //1, 2, [3, 4, 5] </br>
+
+- GIẢI THÍCH: Ở trường hợp thứ nhất chúng ta cũng hiểu như ví dụ 1,ở ví dụ 2 thì các giá trị a, b, c tương ứng với những giá trị của array bên phía bên phải. Nhưng đối với ...c thì nó sẽ tương ứng với những giá trị còn lại tương ứng với kiểu của root (arrays). Hay trong ngôn ngữ Javascript thì ...c chính là rest params hay còn có thể gọi là các giá trị còn lại.
+
+-> Ta hãy cùng đến với ví dụ tiếp theo - Destructuring params object hay còn hiểu nôm na là destructuring trong object:
+
+const {a, b} = {a: 1, b: 2}; </br>
+console.log(a, b);// 1, 2 </br>
+
+// add c  </br>
+
+const {a, b, c} = {a: 1, b: 2, c: () => 3} </br>
+console.log(a, b, c)// 1, 2, () => 3 </br>
+
+// add ...c </br>
+
+const {a, b, ...c} = {a: 1, b: 2, c: () => 3, d: 4} </br> 
+console.log(a, b, c)// 1, 2, { c: () => 3, d: 4}</br> 
 
 
 

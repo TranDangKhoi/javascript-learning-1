@@ -1,4 +1,8 @@
 // Destructuring Object
+
+const { a, b, c } = { a: 1, b: 2, c: () => 3 };
+console.log(a, b, c); // 1, 2, () => 3
+
 const student = {
   name: "Khoi",
   age: 19,
