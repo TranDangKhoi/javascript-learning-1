@@ -55,7 +55,7 @@ console.log(objectToArray({ a: 1, b: 2 }));
 // Bài 3: Truyền vào bên trong hàm 1 object và sau đó là 1 key bạn muốn xóa
 // VD: ({a: 1, b: 2} , 'b') -> {a:1}
 
-const deleteAKey = (obj, ...key) => {
+const deleteAKey = (obj, key) => {
   const newObj = Object.assign({}, obj); // Clone ra thành một obj mới
   // hoặc dùng spread operator
   // const newObj2 = { ...obj };
@@ -63,15 +63,60 @@ const deleteAKey = (obj, ...key) => {
   return newObj;
 };
 
-console.log(deleteAKey({ a: 1, b: 2, c: 2 }, "a", "b"));
+console.log(deleteAKey({ a: 1, b: 2, c: 3 }, "a"));
 
 // Trường hợp bạn muốn xóa nhiều key trong một object thì sao
 
 const deleteKeys = (obj, ...keys) => {
+  const newObj = { ...obj };
   keys.forEach((item) => {
-    delete obj[item];
+    delete newObj[item];
   });
-  return obj;
+  return newObj;
 };
 
 console.log(deleteKeys({ a: 1, b: 2, c: 3 }, "a", "b"));
+
+//4. So sánh 2 object và thông báo nếu 2 cái = nhau
+
+const firstStudent = {
+  name: {
+    firstName: "Tran",
+    lastName: "Khoi",
+  },
+  age: 19,
+  school: {
+    schoolName: "FPT",
+    room: {
+      roomNumber: 101,
+      floor: 4,
+    },
+  },
+};
+
+const secondStudent = {
+  name: {
+    firstName: "Tran",
+    lastName: "Khoi",
+  },
+  age: 19,
+  school: {
+    schoolName: "FPT",
+    room: {
+      roomNumber: 101,
+      floor: 4,
+    },
+  },
+};
+
+const equalObject = (obj1, obj2) => {
+  const JsonObj1 = JSON.stringify(Object.entries(obj1));
+  const JsonObj2 = JSON.stringify(Object.entries(obj2));
+  if (JsonObj1 === JsonObj2) {
+    return "Equal";
+  } else {
+    return "Not Equal";
+  }
+};
+
+console.log(equalObject(firstStudent, secondStudent));

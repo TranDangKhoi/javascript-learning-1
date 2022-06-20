@@ -6,15 +6,15 @@ console.log(randomNumbers.sort());
 // function(callback) -> callback là 1 parameter nằm trong function
 
 const randomNumbers2 = randomNumbers.sort(function (a, b) {
-    if (a > b) {
-        return 1; // sắp xếp theo tăng dần
-    }
-    if (a < b) {
-        return -1; // sắp xếp theo giảm dần
-    }
-})
+  if (a > b) {
+    return 1; // sắp xếp theo tăng dần
+  }
+  if (a < b) {
+    return -1; // sắp xếp theo giảm dần
+  }
+});
 
-const randomNumbers3 = randomNumbers.sort((a, b) => a > b ? 1 : -1);
+const randomNumbers3 = randomNumbers.sort((a, b) => (a > b ? 1 : -1));
 
 console.log(randomNumbers3);
 
@@ -33,11 +33,10 @@ console.log(findMyNumbersIndex);
 // Nếu không tìm thấy thì sẽ trả về kết quả là -1
 console.log(findMyNumbersIndex2);
 
-
 // Sort bổ sung
 // const randomNumbers = [1, 1000, 5, 9, 99];
 
-const randomNumbers4 = randomNumbers.sort((a, b) => a > b ? -1 : 1);
+const randomNumbers4 = randomNumbers.sort((a, b) => (a > b ? -1 : 1));
 console.log(randomNumbers4);
 
 console.log("----Array.map()-----");
@@ -45,15 +44,15 @@ console.log("----Array.map()-----");
 const listNumber = [1, 2, 3, 4, 5];
 // trả ra một mảng mới mà các số (giá trị) trong mảng cũ nhân 2
 const listNumberDouble = listNumber.map(function (value, index, array) {
-    return value * 2;
-})
+  return value * 2;
+});
 // [2, 4, 6, 8, 10]
 console.log(listNumberDouble);
 
 console.log("----Array.forEach()----");
 const listNumberTriple = listNumber.forEach((value, index, array) => {
-    return value * 3;
-})
+  return value * 3;
+});
 
 // Hãy cho biết sự khác nhau giữa forEach và map
 // forEach thì sẽ không return được, map thì có
@@ -81,8 +80,8 @@ console.log("----Array.reduce()----");
 // const listNumber = [1, 2, 3, 4, 5];
 // .reduce((a,b) => {}, initialize value);
 const totalNumber = listNumber.reduce((previousValue, currentValue) => {
-    console.log(previousValue + "+" + currentValue);
-    return previousValue + currentValue;
+  console.log(previousValue + "+" + currentValue);
+  return previousValue + currentValue;
 }, 0);
 
 console.log(totalNumber);
