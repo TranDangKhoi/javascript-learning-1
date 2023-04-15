@@ -271,7 +271,7 @@ C. Đáp án khác
 
 Thực sự là cần giải thích sao ...
 
-Khi ta sử dụng toán tử == để gán giá trị của `student1` cho `student2`.
+Khi ta sử dụng toán tử = để gán giá trị của `student1` cho `student2`.
 
 Thì `student2` sẽ ngay lập tức bị thay đổi địa chỉ bộ nhớ sang địa chỉ bộ nhớ của `student1`, và có cho mình toàn bộ giá trị mà thằng `student1` có. và đương nhiên cả vùng bộ nhớ của chúng nó cũng là một luôn
 
