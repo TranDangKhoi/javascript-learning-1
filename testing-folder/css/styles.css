@@ -1,0 +1,10 @@
+:root {
+  --what: yellow;
+}
+#hello2 {
+  color: yellow;
+}
+.hello {
+  color: blue;
+  font-size: 20px;
+}

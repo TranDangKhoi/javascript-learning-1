@@ -17,12 +17,11 @@ const arrStr1 = JSON.stringify(arr1);
 const arrStr2 = JSON.stringify(arr2);
 console.log(arrStr1 === arrStr2); // true
 
-// clone 2 mảng
-
 const students = ["An", "Khoi", "Minh", "Nam", "Viet"];
 // students.pop(); // Xóa phần tử cuối cùng của mảng
 console.log(students);
 
+// clone 2 mảng
 // Cách 1: Sử dụng slice()
 const slicedStudents = students.slice();
 console.log(slicedStudents);

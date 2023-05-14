@@ -36,4 +36,10 @@ console.log(myStr.substring(1, 5));
 const myStr2 = "       Backend Developer    ";
 // Loại bỏ khoảng trống 2 bên, đưa tất cả về in hoa, thay chữ
 // Developer D thành chữ Developer and Designer, sau đó repeat 2 lần
-console.log(`Result of myStr3: ${myStr2.trim().replace("Developer", "Developer and Designer").toUpperCase().repeat(2)}`);
+console.log(
+  `Result of myStr3: ${myStr2
+    .trim()
+    .replace("Developer", "Developer and Designer")
+    .toUpperCase()
+    .repeat(2)}`
+);
