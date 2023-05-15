@@ -8,11 +8,10 @@ const weekDays = [
   "Chủ nhật",
 ];
 
-function arraymove(arr, fromIndex, toIndex) {
-  var element = arr[fromIndex];
-  arr.splice(fromIndex, 1);
-  arr.splice(toIndex, 0, element);
+function whateverItIs(arr, x) {
+  arr.splice(x, 6);
+  arr.splice(6 - 1, x);
   console.log(arr);
 }
 
-arraymove(weekDays, 0, 1);
+whateverItIs(weekDays, 0);
