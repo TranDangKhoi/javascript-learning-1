@@ -1,47 +1,18 @@
-// async function fetchToDos() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-//   const data = await res.json();
-//   return data;
-// }
+const weekDays = [
+  "Thứ 2",
+  "Thứ 3",
+  "Thứ 4",
+  "Thứ 5",
+  "Thứ 6",
+  "Thứ 7",
+  "Chủ nhật",
+];
 
-// async function secondFetchToDos() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/todos/4");
-//   const data = await res.json();
-//   return data;
-// }
-
-// async function getAllData() {
-//   const [todosResult, todosResult2] = await Promise.allSettled([
-//     fetchToDos(),
-//     secondFetchToDos(),
-//   ]);
-//   if (todosResult.status === "rejected") {
-//     const err = todosResult.reason;
-//     console.log(err);
-//   } else {
-//     const todos = todosResult.value;
-//     console.log(todos);
-//   }
-//   if (todosResult2.status === "rejected") {
-//     const err = todosResult2.reason;
-//     console.log(err);
-//   } else {
-//     const todos2 = todosResult2.value;
-//     console.log(todos2);
-//   }
-// }
-
-// getAllData();
-
-function task(message) {
-  // emulate time consuming task
-  let n = 1000000000;
-  while (n > 0) {
-    n--;
-  }
-  console.log(message);
+function arraymove(arr, fromIndex, toIndex) {
+  var element = arr[fromIndex];
+  arr.splice(fromIndex, 1);
+  arr.splice(toIndex, 0, element);
+  console.log(arr);
 }
 
-console.log("Start script...");
-task("Call an API");
-console.log("Done!");
+arraymove(weekDays, 0, 1);
