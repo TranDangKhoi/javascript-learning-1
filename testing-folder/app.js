@@ -18,5 +18,5 @@ const move = (x) => {
   arr.unshift(daysInAWeek[daysInAWeek.length - 1]);
   return arr;
 };
-console.log(move(0));
+
 console.log(move(1));
