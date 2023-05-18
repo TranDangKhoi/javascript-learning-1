@@ -1,8 +1,3 @@
-// const obj1 = {};s
-
-// console.log(obj2.hasOwnProperty("a"));
-// console.log(obj1.hasOwnProperty("a"));
-
 const daysInAWeek = [
   "Thứ 2",
   "Thứ 3",
@@ -12,6 +7,9 @@ const daysInAWeek = [
   "Thứ 7",
   "Chủ nhật",
 ];
+// x = 0 =>  [CN, T2, T3, ...]
+// x = 1 =>  [T2, T3 ..., CN]
+// x = 2 => [T3, T4, ... CN, T2]
 
 const move = (x) => {
   let arr = daysInAWeek.splice(x, daysInAWeek.length - 1);
