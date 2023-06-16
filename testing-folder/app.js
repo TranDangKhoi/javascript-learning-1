@@ -182,3 +182,30 @@
 // };
 
 // console.log(bubbleSort([9, 4, 1, 3]));
+
+// Binary search quy tắc: tìm phần tử trong mảng đã được sorted
+// array: [4, 11, 12, 20, 23, 35, 40]
+// low = 0; high = arr.length - 1; numToFind = 11
+// mid = 20, numToFind = 11, 20 lớn hơn hay nhỏ hơn 11 => lớn hơn
+// => 11 sẽ nằm ở bên trái mảng => mảng mới [4,11,12,20], numToFind = 11
+// mid = 12 => mảng mới [4,11,12] => mid = 11 => found
+
+const binarySearch = (nums, numToFind) => {
+  let firstIndex = 0;
+  let lastIndex = nums.length - 1;
+  while (firstIndex <= lastIndex) {
+    let midIndex = Math.floor((firstIndex + lastIndex) / 2);
+    const midNum = nums[midIndex]; // 20
+    if (midNum === numToFind) {
+      return midIndex;
+    }
+    if (midNum > numToFind) {
+      lastIndex = midIndex - 1;
+    } else {
+      firstIndex = midIndex + 1;
+    }
+  }
+  return null;
+};
+
+console.log(binarySearch([1, 11, 14, 15, 19, 20, 21, 30], 30));
