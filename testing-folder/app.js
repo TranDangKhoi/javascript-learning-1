@@ -153,12 +153,32 @@
 
 // console.log(detectLargestAndSmallestNumberInArr([-10, 0, 95, 1, 2]));
 
-const linearSearch = (numToFind, nums) => {
-  for (i = 0; i < nums.length; i++) {
-    if (nums[i] === numToFind) {
-      return i;
-    }
-  }
-};
+// const linearSearch = (numToFind, nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     if (nums[i] === numToFind) {
+//       return i;
+//     }
+//   }
+// };
 
-console.log(linearSearch(4, [2, 1, 2, 6, 4]));
+// console.log(linearSearch(4, [2, 1, 2, 6, 4]));
+
+// const bubbleSort = (nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     var isSwapped = false;
+//     for (j = 0; j < nums.length; j++) {
+//       if (nums[j] > nums[j + 1]) {
+//         var temp = nums[j];
+//         nums[j] = nums[j + 1];
+//         nums[j + 1] = temp;
+//         isSwapped = true;
+//       }
+//       if (!isSwapped) {
+//         break;
+//       }
+//     }
+//   }
+//   return nums;
+// };
+
+// console.log(bubbleSort([9, 4, 1, 3]));
