@@ -189,23 +189,97 @@
 // mid = 20, numToFind = 11, 20 lớn hơn hay nhỏ hơn 11 => lớn hơn
 // => 11 sẽ nằm ở bên trái mảng => mảng mới [4,11,12,20], numToFind = 11
 // mid = 12 => mảng mới [4,11,12] => mid = 11 => found
+// const bubbleSort = (nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     let isSwapped = false;
+//     for (j = 0; j < nums.length; j++) {
+//       if (nums[j] > nums[j + 1]) {
+//         var temp = nums[j];
+//         nums[j] = nums[j + 1];
+//         nums[j + 1] = temp;
+//         isSwapped = true;
+//       }
+//     }
+//     if (!isSwapped) {
+//       break;
+//     }
+//   }
+//   return nums;
+// };
 
-const binarySearch = (nums, numToFind) => {
-  let firstIndex = 0;
-  let lastIndex = nums.length - 1;
-  while (firstIndex <= lastIndex) {
-    let midIndex = Math.floor((firstIndex + lastIndex) / 2);
-    const midNum = nums[midIndex]; // 20
-    if (midNum === numToFind) {
-      return midIndex;
-    }
-    if (midNum > numToFind) {
-      lastIndex = midIndex - 1;
-    } else {
-      firstIndex = midIndex + 1;
-    }
-  }
-  return null;
-};
+// // B1: Tạo ra firstIndex, lastIndex để có thể tính ra midIndex
+// // B2: Khi đã có midIndex rồi, thì sẽ có 3 thứ cần phải làm
+// /**
+//  * 1. So sánh nums[midIndex] với numToFind xem có bằng nhau không ?
+//  * 2. So sánh nums[lastIndex] có > nums[midIndex] không ? => Nếu có, thì vị trí của số cần tìm nằm ở bên phải midIndex
+//  * 3. So sánh nums[firstIndex] có nhỏ hơn nums[midIndex] không ?  Nếu có, thì vị trí của số cần tìm nằm ở bên trái midIndex
+//  */
 
-console.log(binarySearch([1, 11, 14, 15, 19, 20, 21, 30], 30));
+// const binarySearch = (nums, numToFind) => {
+//   let firstIndex = 0;
+//   let lastIndex = nums.length - 1;
+//   bubbleSort(nums);
+//   console.log(nums);
+//   while (firstIndex <= lastIndex) {
+//     let midIndex = Math.floor((firstIndex + lastIndex) / 2);
+//     let midNum = nums[midIndex];
+//     if (midNum === numToFind) {
+//       return `The number ${numToFind} is at index ${midIndex}`;
+//     }
+//     if (midNum > numToFind) {
+//       lastIndex = midIndex - 1;
+//     } else {
+//       firstIndex = midIndex + 1;
+//     }
+//   }
+//   return `Can't find the index of the number ${numToFind}`;
+// };
+
+// console.log(binarySearch([9, 1, 2, 14, 6], 14));
+// const builtInpalidromeCheck = (string) => {
+//   const newString = string.replaceAll(" ", "").toLowerCase();
+//   console.log(newString);
+//   const reversedString = string
+//     .split("")
+//     .reverse()
+//     .join("")
+//     .replaceAll(" ", "")
+//     .toLowerCase();
+//   if (newString === reversedString) {
+//     return `The string "${string}" is palindrome`;
+//   } else {
+//     return `The string "${string}" isn't palindrome`;
+//   }
+// };
+
+// console.log(builtInpalidromeCheck("race car"));
+
+// const arr = [6, 1, 2, 3];
+// const sortedArr = arr.sort((a, b) => {
+//   return a - b;
+// });
+
+// console.log(sortedArr);
+
+// const palindromeCheck = (string) => {
+//   const lowerCasedString = string.toLowerCase();
+//   let reversedStr = "";
+//   for (i = lowerCasedString.length - 1; i >= 0; i--) {
+//     reversedStr += lowerCasedString[i];
+//   }
+//   console.log(reversedStr);
+//   return lowerCasedString === reversedStr;
+// };
+
+// console.log(palindromeCheck("aabaa"));
+
+// Viet -> t
+// const reverseString = (str) => {
+//   let reversedString = "";
+//   for (i = str.length - 1; i >= 0; i--) {
+//     reversedString += str[i];
+//   }
+//   return reversedString;
+// };
+
+// console.log(reverseString("Viet"));
