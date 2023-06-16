@@ -41,3 +41,114 @@
 // };
 
 // console.log(whateverSortThisIs([9, 1, 2, 4, 10, 3, -10]));
+// [9, 4, 1, 3] -> [4, 4, 1, 3]
+// [4, 9, 1, 3]
+// [4, 1, 9, 3]
+// ...
+// const bubbleSort = (nums) => {
+//   var isSwapped = false;
+//   for (i = 0; i < nums.length; i++) {
+//     isSwapped = false;
+//     for (j = 0; j < nums.length; j++) {
+//       if (nums[j] > nums[j + 1]) {
+//         var temp = nums[j + 1];
+//         nums[j + 1] = nums[j];
+//         nums[j] = temp;
+//         isSwapped = true;
+//       }
+//       if (!isSwapped) {
+//         break;
+//       }
+//     }
+//   }
+//   console.log(nums);
+// };
+
+// console.log(bubbleSort([9, 4, 1, 3]));
+// 9, 4, 1, 3
+// 1, 4, 9, 3
+//
+// const selectionSort = (nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     var min_index = i;
+//     for (j = i + 1; j < nums.length; j++) {
+//       if (nums[j] < nums[min_index]) {
+//         min_index = j;
+//       }
+//     }
+//     var temp = nums[min_index];
+//     nums[min_index] = nums[i];
+//     nums[i] = temp;
+//   }
+//   return nums;
+// };
+
+// const selectionSort2 = (nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     var minIndex = i;
+//     for (j = i + 1; j < nums.length; j++) {
+//       if (nums[j] < nums[minIndex]) {
+//         minIndex = j;
+//       }
+//     }
+//     var temp = nums[minIndex];
+//     nums[minIndex] = nums[i];
+//     nums[i] = temp;
+//   }
+//   return nums;
+// };
+
+// console.log(selectionSort2([9, 4, 1, 3, 5]));
+
+// const decreasingSelectionSort = (nums) => {
+//   for (i = 0; i < nums.length; i++) {
+//     var min_index = i;
+//     for (j = i + 1; j < nums.length; j++) {
+//       if (nums[min_index] < nums[j]) {
+//         min_index = j;
+//       }
+//     }
+//     var temp = nums[min_index];
+//     nums[min_index] = nums[i];
+//     nums[i] = temp;
+//   }
+//   return nums;
+// };
+
+// console.log(decreasingSelectionSort([9, 5, 8, 1, 3]));
+
+// const insertionSort = (nums) => {
+//   for (i = 1; i < nums.length; i++) {
+//     var j = i - 1;
+//     var temp = nums[i];
+//     while (nums[j] > temp && j >= 0) {
+//       nums[j + 1] = nums[j];
+//       j--;
+//     }
+//     nums[j + 1] = temp;
+//     console.log(nums);
+//   }
+// };
+
+// console.log(insertionSort([9, 4, 1, 3]));
+
+const removeDuplicated = (nums) => {
+  var temp = [];
+  for (i = 0; i < nums.length; i++) {}
+};
+
+const detectLargestAndSmallestNumberInArr = (nums) => {
+  var largest = nums[0];
+  var smallest = nums[0];
+  for (i = 0; i < nums.length; i++) {
+    if (nums[i] > largest) {
+      largest = nums[i];
+    }
+    if (nums[i] < smallest) {
+      smallest = nums[i];
+    }
+  }
+  return `The largest number is ${largest} and the smallest one is ${smallest}`;
+};
+
+console.log(detectLargestAndSmallestNumberInArr([-10, 0, 95, 1, 2]));
