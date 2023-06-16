@@ -132,23 +132,33 @@
 
 // console.log(insertionSort([9, 4, 1, 3]));
 
-const removeDuplicated = (nums) => {
-  var temp = [];
-  for (i = 0; i < nums.length; i++) {}
-};
+// const removeDuplicated = (nums) => {
+//   var temp = [];
+//   for (i = 0; i < nums.length; i++) {}
+// };
 
-const detectLargestAndSmallestNumberInArr = (nums) => {
-  var largest = nums[0];
-  var smallest = nums[0];
+// const detectLargestAndSmallestNumberInArr = (nums) => {
+//   var largest = nums[0];
+//   var smallest = nums[0];
+//   for (i = 0; i < nums.length; i++) {
+//     if (nums[i] > largest) {
+//       largest = nums[i];
+//     }
+//     if (nums[i] < smallest) {
+//       smallest = nums[i];
+//     }
+//   }
+//   return `The largest number is ${largest} and the smallest one is ${smallest}`;
+// };
+
+// console.log(detectLargestAndSmallestNumberInArr([-10, 0, 95, 1, 2]));
+
+const linearSearch = (numToFind, nums) => {
   for (i = 0; i < nums.length; i++) {
-    if (nums[i] > largest) {
-      largest = nums[i];
-    }
-    if (nums[i] < smallest) {
-      smallest = nums[i];
+    if (nums[i] === numToFind) {
+      return i;
     }
   }
-  return `The largest number is ${largest} and the smallest one is ${smallest}`;
 };
 
-console.log(detectLargestAndSmallestNumberInArr([-10, 0, 95, 1, 2]));
+console.log(linearSearch(4, [2, 1, 2, 6, 4]));
